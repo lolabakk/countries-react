@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Countries from "./Countries.js";
+import CountriesDetails from "./CountriesDetails";
+import SearchBar from "./SearchBar";
+import Regions from "./Regions";
+import DisplayCountryInfo from "./DisplayCountryInfo";
 
 function App() {
+  const [data]= useState(Countries)
+  const [displayCountries, setDisplayCountries]= useState(Countries);
+  const [countryHomepage, setCountryHomepage]= useState(true); 
+  const [countryData, setCountryData]= useState({})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     <div>
+       {countryHomepage ? 
+       ( <>
+        <div className="searchFilter">      
+          <SearchBar data={data} setDisplayCountries={setDisplayCountries}/>
+          <Regions data={data} setDisplayCountries={setDisplayCountries}/>
+        </div>
+        <div className="countriesInfo">
+          {displayCountries.map(country =>{
+            return <CountriesDetails Countries={country} setCountryHomepage={setCountryHomepage} setCountryData={setCountryData}/>    
+          })}
+        </div> 
+        </> ):         
+       <DisplayCountryInfo data ={data} setCountryHomepage={setCountryHomepage} countryData={countryData} setCountryData={setCountryData}/>     
+     }
+     </div> 
   );
 }
 
