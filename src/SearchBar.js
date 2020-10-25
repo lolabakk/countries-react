@@ -14,7 +14,7 @@ function SearchBar({data, setDisplayCountries}) {
     },[data, setDisplayCountries, searchValue])
     return (
         
-      <input type="text" value={searchValue} placeholder="Search..." onChange={handleChange}/>
+      <input className="searchCountry" type="text" value={searchValue} placeholder="Search..." onChange={handleChange}/>
     )
 }
 

@@ -6,7 +6,7 @@ function CountryInfoButton({setCountryHomepage}) {
     }
     return (
         <div>
-            <button onClick={handleClick}>Back</button>
+            <button className="modeButton" onClick={handleClick}>Back</button>
         </div>
     )
 }

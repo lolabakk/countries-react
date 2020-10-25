@@ -18,7 +18,7 @@ function Regions({data, setDisplayCountries}) {
   
 
     return (
-     <select name="regions" id="regions" onChange={handleChange}>
+     <select className="selectRegions" name="regions" id="regions" onChange={handleChange}>
          <option value="default">All Regions</option>
         <option value="africa">Africa</option>
         <option value="americas">Americas</option>

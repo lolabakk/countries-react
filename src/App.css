@@ -1,24 +1,50 @@
-/* .App {
-  text-align: center;
+.darkMode {
+  --text-color: white;
+  --bg-color: hsl(207, 26%, 17%);
+  --box-shade: 0 0 10px rgba(124, 123, 120, 0.603);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
+.lightMode {
+  --text-color: black;
+  --bg-color: hsl(0, 0%, 98%);
+  --box-shade: 0 0 10px rgba(124, 123, 120, 0.603);
+}
+
+body {
+  /* background-color: rgb(248, 247, 246); */
+  background-color: var(--bg-color);
+  font-family: "Nunito Sans", sans-serif;
+}
 .countriesInfo{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color:rgb(176, 216, 230);
+  background-color:var(--bg-color);
   align-items: center;
+}
+.header{
+   background-color: var(--bg-color);
+   color:var(--text-color);
+}
+
+.searchCountry{
+  background-color: var(--bg-color);
+  color:var(--text-color);
+}
+
+.selectRegions {
+   background-color: var(--bg-color);
+   color:var(--text-color);
+  
+
 }
 
 .countryDetail{
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.452);
+  box-shadow: var(--box-shade);  
   margin: 2rem;
   width: 200px;
-  background-color: #ffff;
+  background-color:var(--bg-color);
+  color: var(--text-color);
   
 }
 .countriesFlag{  
@@ -36,4 +62,55 @@
 
 .flagImage {
   width: 400px;
+}
+
+.appDark {
+  background-color: var(--bg-color);
+  
+}
+.displayColor {  
+  color:var(--text-color);
+   background-color: var(--bg-color);
+}
+.countryBorder {
+  display: flex;
+  background-color: var(--bg-color);
+  color:var(--text-color);
+  margin-right: 10px;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.lagCountryInfo {
+ color:var(--text-color);
+}
+.modeButton{
+  background-color: var(--bg-color);
+  color:var(--text-color);
+  display: flex; 
+  margin-top: 20px;
+  margin: auto;
+
+  position: relative  ;
+  left: 600px;
+ top: 23px;
+  
+ 
+ 
+
+}
+.wrapper{
+
+ 
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  
+
+}
+h2{
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+
 }

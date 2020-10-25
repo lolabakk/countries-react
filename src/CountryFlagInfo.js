@@ -8,7 +8,7 @@ function CountryFlagInfo({Countries, countryData}) {
         <div className="flagInfo"> 
             <img className="flagImage" src={countryData.flag} alt=""/>
               <h1>{countryData.name}</h1> 
-            <ul>
+            <ul className="flagCountryInfo">
                  
                 <li><b>Native Name</b>: {countryData.name.toLocaleString()}</li>                         
                 <li><b>Population</b>: {countryData.population.toLocaleString()}</li>

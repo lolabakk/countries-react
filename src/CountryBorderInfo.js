@@ -16,7 +16,7 @@ function CountryBorderInfo({countryData, Countries, setCountryData}) {
         <div>
            <h3>Border Countries</h3>
             {borderInfo.map((border)=>{          
-            return <button onClick={()=>handleClick(border)}>{border}</button>                        
+            return <button className= "countryBorder" onClick={()=>handleClick(border)}>{border}</button>                        
                 
             })}       
         </div>
